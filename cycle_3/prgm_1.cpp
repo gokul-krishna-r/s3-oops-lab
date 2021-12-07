@@ -58,10 +58,13 @@ class Date{
 
 int main(){
 	int day,month,year;
-	cout<<"Enter date");
+	int n;
+	cout<<"Enter date: ";
 	cin>>day>>month>>year;
 	Date d(day,month,year);
-	d+10;
+	cout<<"Enter the no of days to increment: ";
+	cin>>n;
+	d+n;
 	d.display();
 return 0;
 }
