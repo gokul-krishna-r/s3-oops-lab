@@ -16,6 +16,8 @@ class Date{
 			year=y;
 		}
 		Date operator +(int a){
+			
+			if(year>0 && 0<month<13&& 0<day<32){
 			day+=a;
             if(day>31 && (month==1||month==3||month==5||month==7||month==8||month==10||month==12)){
 				day=day-31;
@@ -44,7 +46,10 @@ class Date{
                   month=3;
                    }
             }
-					
+
+		}else{
+			cout<<"Date is invalid"<<endl;
+			}		
 					
 
 
