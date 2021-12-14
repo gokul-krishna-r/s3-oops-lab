@@ -8,7 +8,7 @@ using namespace std;
 
 class Date{
 	private:
-		int day,month,year;
+		int day,month,year,flag;
 	public:
 		Date(int d,int m,int y){
 			day=d;
@@ -17,7 +17,8 @@ class Date{
 		}
 		Date operator +(int a){
 			
-			if(year>0 && 0<month<13&& 0<day<32){
+			if(year>0 && day >0 && day <32 && month>0 && month<13){
+			flag=1;
 			day+=a;
 			do{
             if(day>31 && (month==1||month==3||month==5||month==7||month==8||month==10||month==12)){
@@ -50,7 +51,9 @@ class Date{
 		}while(day>31);
 		
 		}else{
-			cout<<"Date is invalid"<<endl;
+			//Date is invalid
+			flag=0;
+
 			}		
 					
 		
@@ -59,6 +62,9 @@ class Date{
 
 		void display(){
 			cout<<"The date is "<<day<<"/"<<month<<"/"<<year<<endl;
+		}
+		int getFlag(){
+			return flag;
 		}
 		
 };
@@ -72,7 +78,13 @@ int main(){
 	cout<<"Enter the no of days to increment: ";
 	cin>>n;
 	d+n;
-	d.display();
+	if(d.getFlag()){
+		d.display();
+	}else{
+		cout<<"Date is invalid"<<endl;
+	}
+	
 	
 return 0;
 }
+
