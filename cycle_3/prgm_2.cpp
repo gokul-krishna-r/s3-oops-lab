@@ -1,3 +1,8 @@
+/*
+Gokul Krishna R
+Reg No. 20220040
+*/
+
 #include<iostream>
 using namespace std;
 
@@ -32,7 +37,9 @@ class Dist{
 
             if(inch1<inch2){
                 cout<<feet<<" feet and "<<inch<<" inch is less than "<<d.feet<<" feet and "<<d.inch<<" inch"<<endl;
-            }else{
+            }else if(inch1==inch2){
+				cout<<"Both distances are equal"<<endl;
+			}else{
                 cout<<d.feet<<" feet and "<<d.inch<<" inch is less than "<<feet<<" feet and "<<inch<<" inch"<<endl;
             }
         }
