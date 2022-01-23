@@ -58,9 +58,12 @@ int main(){
             metres=d1;
             cout<<"Distance is "<<metres<<" metres"<<endl<<endl;
             break;
+        case 3:
+            break;
         default:
             cout<<"Some error occured";
     }
     }while(choice!=3);
     return 0;
 }
+

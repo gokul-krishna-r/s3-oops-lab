@@ -62,6 +62,7 @@ class Date{
 
 		void display(){
 			cout<<"The date is "<<day<<"/"<<month<<"/"<<year<<endl;
+		
 		}
 		int getFlag(){
 			return flag;
