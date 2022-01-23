@@ -6,7 +6,6 @@ Reg No. 20220040
 #include <cmath>
 
 using namespace std;
-//foreard declaration
 
 
 class PolarCoordn{
@@ -16,7 +15,7 @@ class PolarCoordn{
             radius=0;
             angle=0;
         }
-        PolarCoordn(float angle,float radius){
+        PolarCoordn(float radius,float angle){
             this->radius =radius;
             this->angle=angle;
         }

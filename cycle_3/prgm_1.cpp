@@ -14,6 +14,7 @@ class Date{
 			month=m;
 			year=y;
 		}
+		//return_type operator operator(parameter){}
 		Date operator +(int a){
 			
 			if(year>0 && day >0 && day <32 && month>0 && month<13){
@@ -68,6 +69,8 @@ class Date{
 		
 };
 
+
+ 
 int main(){
 	int day,month,year;
 	int n;
@@ -76,6 +79,8 @@ int main(){
 	Date d(day,month,year);
 	cout<<"Enter the no of days to increment: ";
 	cin>>n;
+
+	
 	d+n;
 	if(d.getFlag()){
 		d.display();
