@@ -4,9 +4,7 @@ Reg No. 20220040
 */
 #include<iostream>
 #include <cmath>
-
 using namespace std;
-
 
 class PolarCoordn{
     float radius,angle;
@@ -28,8 +26,6 @@ class PolarCoordn{
         void display(){
             cout<<"The polar coordinate is ("<<radius<<", "<<angle<<")"<<endl;
         }
-
-       
 };
 
 class RectCoordn{
@@ -43,7 +39,6 @@ class RectCoordn{
             this->x =x;
             this->y=y;
         }
-    
         float getX(){
             return x;
         }
@@ -56,9 +51,7 @@ class RectCoordn{
         }
          void display(){
             cout<<"The rectangular coordinate is ("<<x<<", "<<y<<")"<<endl;
-        }
-        
-       
+        }  
 };
 
 int main(){

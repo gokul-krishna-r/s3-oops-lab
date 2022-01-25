@@ -5,6 +5,48 @@ Reg No. 20220040
 #include<iostream>
 using namespace std;
 
+bool leapyear(int year){
+	if (year % 400 == 0){
+		return true;
+	}
+	if (year % 100 == 0){
+		return false;
+	}
+	if (year % 4 == 0){
+		return true;
+	}
+	return false;
+	}
+
+bool validator(int day,int month,int year){
+	if(year<0){
+		return false;
+	}
+	if(month<1||month>12){
+		return false;
+	}
+	if(day<1||day>31){
+		return false;
+	}
+	if(month==2){
+		if(leapyear(year)){
+			if(day>29){
+				return false;
+			}
+		}
+		else{
+				if(day>28){
+					return false;
+				}
+			}
+	}
+	if (month ==4||month==6||month==9||month==11){
+		if(day>30){
+			return false;
+		}
+	}
+return true;
+}
 class Date{
 	private:
 		int day,month,year,flag;
@@ -14,10 +56,9 @@ class Date{
 			month=m;
 			year=y;
 		}
-		//return_type operator operator(parameter){}
+
 		Date operator +(int a){
-			
-			if(year>0 && day >0 && day <32 && month>0 && month<13){
+			if(validator(day,month,year)){
 			flag=1;
 			day+=a;
 			do{
@@ -38,7 +79,7 @@ class Date{
 					month=month+1;
 				}
 			}else if((month==2)&&(day>28)){
-               if(year%4==0){
+               if(leapyear(year)){
 				  day=day-29;
                   month=3;
 
@@ -49,15 +90,10 @@ class Date{
                    }
             }
 		}while(day>31);
-		
 		}else{
 			//Date is invalid
 			flag=0;
-
 			}		
-					
-		
-
 		}
 
 		void display(){
@@ -80,8 +116,6 @@ int main(){
 	Date d(day,month,year);
 	cout<<"Enter the no of days to increment: ";
 	cin>>n;
-
-	
 	d+n;
 	if(d.getFlag()){
 		d.display();

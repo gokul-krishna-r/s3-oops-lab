@@ -49,6 +49,10 @@ Dist operator +(Dist d1,Dist d2){
     Dist d3;
     d3.feet=d1.feet+d2.feet;
     d3.inch=d1.inch+d2.inch;
+     if(d3.inch>=12){
+        d3.feet++;
+        d3.inch -= 12;
+    }
     return d3;
 
 }
