@@ -80,9 +80,13 @@ class Date{
 				}
 			}else if((month==2)&&(day>28)){
                if(leapyear(year)){
-				  day=day-29;
-                  month=3;
-
+				   if(day==29){
+					    day=29;
+					   month=2;
+				   }else{
+					  day=day-29;
+                  	  month=3;
+				   }
                }
                else{
 				  day=day-28;
@@ -95,19 +99,14 @@ class Date{
 			flag=0;
 			}		
 		}
-
 		void display(){
 			cout<<"The date is "<<day<<"/"<<month<<"/"<<year<<endl;
-		
 		}
 		int getFlag(){
 			return flag;
 		}
-		
 };
 
-
- 
 int main(){
 	int day,month,year;
 	int n;
@@ -122,8 +121,5 @@ int main(){
 	}else{
 		cout<<"Date is invalid"<<endl;
 	}
-	
-	
 return 0;
 }
-
