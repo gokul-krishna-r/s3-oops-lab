@@ -92,7 +92,7 @@ int main(){
     Supervisor s;
     Manager m;
     int choice;
-    cout<<"Select Employee Category: "<<endl<<"1.Manager"<<endl<<"2.Supervisor"<<endl<<"Enter choice: ";
+    cout<<"Select Employee Category: "<<endl<<"1.Manager"<<endl<<"2.Supervisor"<<endl<<"3.Exit"<<endl<<"Enter choice: ";
     cin>>choice;
     cin.ignore();
     switch(choice){
