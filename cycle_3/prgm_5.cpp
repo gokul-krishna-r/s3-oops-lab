@@ -45,7 +45,7 @@ class RectCoordn{
         float getY(){
             return y;
         }
-         void operator =(PolarCoordn p){
+        void operator =(PolarCoordn p){
             x=p.getRadius() * cos((p.getAngle()*3.14)/180);
             y=p.getRadius() * sin((p.getAngle()*3.14)/180);
         }
