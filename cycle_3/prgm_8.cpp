@@ -3,13 +3,10 @@
 #include<string>
 using namespace std;
 
-
 class Shape{
     protected:
         float side[100],area,perimeter;
     public:
-       
-
         Shape(int n){
             for(int i=0;i<n;i++){
                 cout<<"Enter side "<<i+1<<" value: ";
@@ -47,7 +44,6 @@ class Triangle:public Shape{
             }
 };
 class Square:public Shape{
-    float s=0;
     public:
         Square():Shape(1){
         }
@@ -56,7 +52,7 @@ class Square:public Shape{
             area=side[0]*side[0];
         }
         void calcPerimeter(){
-               perimeter=3*side[0];
+               perimeter=4*side[0];
             }
 };
 class Rectangle:public Shape{
@@ -72,7 +68,6 @@ class Rectangle:public Shape{
         }
 };
 class Circle:public Shape{
-    float s=0;
     public:
         Circle():Shape(1){
         }

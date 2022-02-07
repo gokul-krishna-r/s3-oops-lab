@@ -96,7 +96,6 @@ class BTechStud:public Student{
             cout<<"Enter mark: ";
             cin>>mark;
         }
-        
         void sort(int n){
             for (int i=0; i<n-1; i++) {
                 for (int j=0; j<n-i-1;j++){
@@ -115,7 +114,6 @@ class BTechStud:public Student{
                 }
             }
         }
-
         void display(){
             cout << "Name: " << name << endl;
             cout << "Age: " << age << endl;
@@ -123,18 +121,17 @@ class BTechStud:public Student{
             cout << "Marks: " << mark << endl << endl;
         }       
 };
-
 int main(){
     int n=0,choice=0;
     BTechStud bs[100];
     MTechStud ms[100];
     Student *s;
-    s=bs;
     cout<<endl<<"Select Course: "<<endl<<"1. Btech"<<endl<<"2. MTech"<<endl<<"Enter choice: ";
     cin>>choice;
     switch (choice){
         case 1:
             cout<<"Enter no. of Btech Students: ";
+            s=bs;
             cin>>n;
             for(int i=0;i<n;i++){
                 cout<<"------BTech Student "<<i+1<<"--------"<<endl;
@@ -164,8 +161,5 @@ int main(){
             cout<<"Some error occured";
             break;
     }
-    
-    
-    
 }
 
